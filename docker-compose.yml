@@ -1,0 +1,18 @@
+#Указания версии compose - завитит функционал
+version: '2'
+#Описание серивов
+services:
+# getTime1
+    get_time_1:
+      image: get-time-app
+      #Включить интерактивный вывод
+      tty: true
+
+# getTime2
+    get_time_2:
+      image: get-time-app
+      #Включить интерактивный вывод
+      tty: true
+      #Зависимость ненужна, но укажим для примера
+      depends_on:
+        - get_time_1
